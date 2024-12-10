@@ -27,11 +27,11 @@ class DishViewSet(viewsets.ModelViewSet):
 
     action_permission_classes = {
         "create": [AllowAny],
-        "update": [IsAuthenticated],
-        "retrieve": [IsAuthenticated],
-        "list": [IsAuthenticated],
-        "partial_update": [IsAuthenticated],
-        "destroy": [IsAuthenticated],
+        "update": [AllowAny],
+        "retrieve": [AllowAny],
+        "list": [AllowAny],
+        "partial_update": [AllowAny],
+        "destroy": [AllowAny]
     }
 
     def get_permissions(self):

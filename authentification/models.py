@@ -66,7 +66,7 @@ class AuthUser(AbstractUser):
     role = models.CharField(max_length=20, choices=[('client', 'Client'), ('vendeur', 'Vendeur'), ('admin', 'Administrateur')])
     reset_token = models.CharField(max_length=255, blank=True, null=True)
     is_connected=models.BooleanField(default=False)
-       
+    username = models.CharField(max_length=50,null=True)
     groups = models.ManyToManyField(
         Group,
         verbose_name=_("groups"),
