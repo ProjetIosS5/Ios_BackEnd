@@ -7,6 +7,6 @@ class Order(models.Model):
     dateOrder = models.DateTimeField(auto_now_add=True)
     totalPrice = models.FloatField()
     client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name="orders")
-
+    is_validated = models.BooleanField(default=False)
     def __str__(self):
         return f"Order #{self.idOrder} - {self.client.firstName}"
