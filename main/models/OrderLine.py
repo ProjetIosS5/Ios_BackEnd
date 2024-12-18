@@ -7,7 +7,7 @@ class OrderLine(models.Model):
     idOrder = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="order_lines")
     idDish = models.ForeignKey(Dish, on_delete=models.CASCADE, related_name="order_lines")
     quantity = models.PositiveIntegerField()
-    subtotal = models.DecimalField(max_digits=10, decimal_places=2)
+    subtotal = models.FloatField()
 
     def save(self, *args, **kwargs):
         self.subtotal = self.idDish.price * self.quantity

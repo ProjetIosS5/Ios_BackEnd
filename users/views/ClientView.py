@@ -27,10 +27,10 @@ class ClientViewSet(viewsets.ModelViewSet):
 
     action_permission_classes = {
         "create": [AllowAny],
-        "update": [IsAuthenticated],
+        "update": [AllowAny],
         "retrieve": [IsAuthenticated],
-        "list": [IsAuthenticated],
-        "partial_update": [IsAuthenticated],
+        "list": [AllowAny],
+        "partial_update": [AllowAny],
         "destroy": [IsAuthenticated],
     }
 

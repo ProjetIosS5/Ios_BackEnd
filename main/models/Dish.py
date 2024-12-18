@@ -21,7 +21,7 @@ class Dish(models.Model):
     idDish = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     description = models.TextField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    price = models.FloatField()
     calories = models.PositiveIntegerField()
     proteins = models.FloatField()
     carbs = models.FloatField()
