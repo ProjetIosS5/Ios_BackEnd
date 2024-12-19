@@ -10,8 +10,8 @@ class OrderLine(models.Model):
     subtotal = models.FloatField()
 
     def save(self, *args, **kwargs):
-        self.subtotal = self.idDish.price * self.quantity
+        self.subtotal = self.dish.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f"OrderLine: {self.idOrder.idOrder} - {self.idDish.name}"
+        return f"OrderLine: {self.idOrder.idOrder} - {self.dish.name}"
