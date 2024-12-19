@@ -9,4 +9,4 @@ class OrderFilter(FilterSet):
 
     class Meta:
         model = Order
-        fields = ['dateOrder', 'min_total_price', 'max_total_price']
+        fields = ['dateOrder', 'min_total_price', 'max_total_price','is_validated','client']
