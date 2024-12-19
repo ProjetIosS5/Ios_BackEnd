@@ -5,7 +5,7 @@ from main.models.Order import Order
 
 class OrderLine(models.Model):
     idOrder = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="order_lines")
-    idDish = models.ForeignKey(Dish, on_delete=models.CASCADE, related_name="order_lines")
+    dish = models.ForeignKey(Dish, on_delete=models.CASCADE, related_name="order_lines")
     quantity = models.PositiveIntegerField()
     subtotal = models.FloatField()
 
