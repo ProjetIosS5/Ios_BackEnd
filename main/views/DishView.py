@@ -13,7 +13,7 @@ class DishViewSet(viewsets.ModelViewSet):
     serializer_class = DishRequestSerializer
     filter_backends = [DjangoFilterBackend,SearchFilter, OrderingFilter]
     filterset_class = DishFilter
-    search_fields = ['id','name']
+    search_fields = ['id','name','price','calories','proteins','carbs']
     ordering_fields = ['name','dateOrder','totalPrice']
     
     

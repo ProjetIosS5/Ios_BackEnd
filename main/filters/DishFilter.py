@@ -9,5 +9,5 @@ class DishFilter(FilterSet):
 
     class Meta:
         model = Dish
-        fields = ['name', 'min_price', 'max_price']
+        fields = ['name', 'min_price', 'max_price', 'price','calories','proteins','carbs']
 
