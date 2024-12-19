@@ -1,6 +1,6 @@
 
 from main.models.Order import Order
-from main.serializers.OrderLineSerializers import OrderLineRequestSerializer
+from main.serializers.OrderLineSerializers import OrderLineRequestSerializer, OrderLineResponseSerializer
 
 from rest_framework import serializers
 
@@ -13,7 +13,7 @@ class OrderRequestSerializer(serializers.ModelSerializer):
         
 
 class OrderResponseSerializer(serializers.ModelSerializer):
-    order_lines = OrderLineRequestSerializer(many=True, read_only=True)
+    order_lines = OrderLineResponseSerializer(many=True, read_only=True)
 
     class Meta:
         model = Order

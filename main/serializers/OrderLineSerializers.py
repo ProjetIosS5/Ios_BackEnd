@@ -4,7 +4,7 @@ from main.models.OrderLine import OrderLine
 from main.serializers.DishSerializers import DishResponseSerializer
 
 class OrderLineRequestSerializer(serializers.ModelSerializer):
-    dish = DishResponseSerializer(read_only=True)
+    # dish = DishResponseSerializer(read_only=True)
     class Meta:
         model = OrderLine
         fields = "__all__"
